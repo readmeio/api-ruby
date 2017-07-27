@@ -9,6 +9,12 @@ Add this line to your application's Gemfile:
 ```ruby
 gem 'readmeio'
 ```
+Or you can specify git url
+```ruby
+gem "readmeio", :git => "git@github.com:readmeio/api-ruby.git"
+```
+
+
 
 And then execute:
 
