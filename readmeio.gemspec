@@ -6,8 +6,8 @@ require 'readmeio/version'
 Gem::Specification.new do |spec|
   spec.name          = "readmeio"
   spec.version       = Readmeio::VERSION
-  spec.authors       = ["Abdul Barek"]
-  spec.email         = ["barek2k2@gmail.com"]
+  spec.authors       = ["ReadMe"]
+  spec.email         = ["support@readme.io"]
 
   spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
   spec.description   = %q{TODO: Write a longer description or delete this line.}
