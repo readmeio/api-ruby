@@ -1,10 +1,10 @@
-require "readmeio/version"
+require "api-build/version"
 require 'net/http'
 require 'uri'
 require 'json'
 
 
-module Readmeio
+module Build
   class Api
     API_PATH = "https://api.readme.build/v0/services/"
     HTTP_OPEN_TIMEOUT = 5
@@ -48,7 +48,7 @@ module Readmeio
     def prepare_headers(request, version_override)
       request["content-type"] = 'application/json'
       request.add_field 'X-Build-Meta-Language', "ruby@#{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}"
-      request.add_field 'X-Build-Meta-SDK', "api@#{Readmeio::VERSION}"
+      request.add_field 'X-Build-Meta-SDK', "api@#{Build::VERSION}"
       request.add_field 'X-Build-Meta-OS', RUBY_PLATFORM
       request.add_field 'X-Build-Version-Override', version_override if version_override
       request

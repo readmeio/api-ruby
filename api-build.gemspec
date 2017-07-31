@@ -1,25 +1,25 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'readmeio/version'
+require 'api-build/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "readmeio"
-  spec.version       = Readmeio::VERSION
+  spec.name          = "api-build"
+  spec.version       = Build::VERSION
   spec.authors       = ["ReadMe"]
   spec.email         = ["support@readme.io"]
 
-  spec.summary       = "test summary"
-  spec.description   = "test description"
-  spec.homepage      = "https://github.com/readmeio/api-ruby"
+  spec.summary       = %q{An easy way to build, deploy and share APIs}
+  spec.description   = %q{ReadMe Build is a really easy way to build, deploy and share APIs}
+  spec.homepage      = "https://readme.build"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
-  # if spec.respond_to?(:metadata)
-  #   spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-  # else
-  #   raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
-  # end
+  if spec.respond_to?(:metadata)
+    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+  else
+    raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
+  end
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"

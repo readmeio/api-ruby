@@ -1,4 +1,4 @@
-# Readmeio
+# API Build
 
 This is a Ruby API client for [ReadMe Build](https://readme.build). It's based on the [api spec](https://github.com/readmeio/api-spec).
 
@@ -22,9 +22,9 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-api = Readmeio::Api.new
-api.config(YOUR_API_KEY_HERE)
-response = api.run('math','multiply',{:numbers => [10,20,30]})    
+api = Build::Api.new
+api.config('YOUR_API_KEY_HERE')
+response = api.run('math','multiply',{:numbers => [10,20,30]})
 ```
 
 ## Running Test:
