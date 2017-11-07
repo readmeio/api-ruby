@@ -6,7 +6,7 @@ require 'json'
 
 module Build
   class Api
-    API_PATH = "https://api.readme.build/v0/services/"
+    API_PATH = "https://api.readme.build/v1/"
     HTTP_OPEN_TIMEOUT = 5
 
     def config(api_key, password='')
@@ -17,9 +17,14 @@ module Build
     def run(service, method, data={})
       begin
         organization, service, version_override = generate_api_url_parts(service)
-        service_full = "#{organization}/#{service}"
-        path = "#{API_PATH}#{service_full}/#{method}/invoke"
 
+        if organization.nil?
+          service_full = "/#{service}"
+        else
+          service_full = "/@#{organization}/#{service}"
+        end
+
+        path = "#{API_PATH}run#{service_full}/#{method}"
         url = URI(path)
         http = Net::HTTP.new(url.host, url.port)
         http.use_ssl = true
