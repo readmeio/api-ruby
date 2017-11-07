@@ -1,4 +1,4 @@
-require 'api/version'
+require_relative "api/version"
 require 'net/http'
 require 'uri'
 require 'json'
