@@ -1,10 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'api-build/version'
+require 'api/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "api-build"
+  spec.name          = "api"
   spec.version       = Build::VERSION
   spec.authors       = ["ReadMe"]
   spec.email         = ["support@readme.io"]

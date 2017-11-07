@@ -39,8 +39,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Deploying Gem
 
-    $ gem build api-build.gemspec
-    $ gem push api-build-?.?.?.gem
+    $ gem build api.gemspec
+    $ gem push api-?.?.?.gem
 
 ## Contributing
 
